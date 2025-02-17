@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="Name"></p>
+    
+    <p id="if"> </p>
+
+    <p id="days"></p>
+
+    <p id="car"></p>
+
+    <p id="num"></p>
+
+    <p id="forin"></p>
+
+    <P id="while"></P>
+
+    <script>
+        const fruits = ["Banana", "Apple", "Grasp", "Orange", "Mango" ]
+        fruits.push("Lemon")
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for(let i = 0; i<fLen; i++)
+        {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+
+        const student = ["ID", "Name", "Course", "Program_start_date"]
+
+
+        let info ="<ul>";
+            student.forEach(allStudent)
+
+            function allStudent(value){
+                info += "<li>" + value + "</li>";
+            }
+        
+        document.getElementById("Name").innerHTML = info;
+
+        const hours = new Date().getHours();
+        let greeting;
+
+        if(hours < 10){
+            greeting = "Good Morning";
+        } else if(hours < 20){
+            greeting = "Good Day";
+        } else{
+            greeting = "Good Evening"
+        }
+
+        document.getElementById("if").innerHTML = greeting;
+
+
+        let day;
+
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+        
+            case 1:
+                day = "Monday";
+                break;
+
+            case 2:
+                day = "Tuesday";
+                break;
+
+            case 3:
+                day = "Wednesday";
+                break;
+
+            case 4:
+                day = "Thursday";
+                break;
+
+            case 5:
+                day = "Friday";
+                break;
+
+            case 6:
+                day = "Saturday";
+                break;        
+            default:
+                day = "You have to wait"
+                break;
+        }
+
+        document.getElementById("days").innerHTML = "Today is " + day ;
+
+        const cars = ["BMW", "Audi", "Suzuki", "Honda", "Hyundai"] ; 
+
+        let result="";
+
+        for(let i = 0; i<cars.length; i++){
+            result += cars[i] + "<br>"; 
+        }
+        
+        document.getElementById("car").innerHTML = result;
+
+        let num = 5;
+
+        let r = "";
+
+        for(let i = 0; i<num; i++){
+             r += "number " + i + "<br>"; 
+        }
+
+        document.getElementById("num").innerHTML = r;
+
+        const car = ["BMW", "Audi", "Suzuki", "Honda", "Hyundai"] ;
+
+        let re = "";
+
+        for(let x in car){
+            re += car[x] +  " "
+        }
+        
+        document.getElementById("forin").innerHTML = re;
+
+        let i = 0;
+
+        let res = "";
+
+        while (i<10) {
+            res += i + "<br>";
+            i++;
+        }
+
+        document.getElementById("while").innerHTML = res;
+
+    </script>
+
+
+    
+</body>
+</html>

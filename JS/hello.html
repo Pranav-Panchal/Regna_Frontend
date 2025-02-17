@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function firstFunction(){
+            document.getElementById('para').innerHTML='para changed';
+        }
+    </script>
+</head>
+<body>
+    <p id="demo">JAVA CAN CHANGE HTML CONTENT</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="HELLO" '> Click Me</button>
+
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+    
+    <img id="myImage" src="pic_bulboff.gif" alt="">
+
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn on the light</button>
+    <h5 id="font">this is h5</h5>
+
+    <button onclick="document.getElementById('font').style.fontSize='50px'">change font</button>
+    <h4 id="hey"></h4>
+    <script>
+        document.getElementById('hey').innerHTML='HELLO'
+    </script>
+
+    <p id="para">
+        para
+    </p>
+    <button onclick="firstFunction()">Try it</button>
+
+    <p>My first paragraph.</p>
+
+    <p>Never call document.write after the document has finished loading.
+    It will overwrite the whole document.</p>
+
+    <button onclick="window.print()"> Print it</button>
+
+    <p id="c"></p>
+    <p id="fun"></p>
+
+    <p id="cel"></p>
+
+    <p id="car"></p>
+
+    <p id="date"></p>
+
+    <p id="full"></p>
+
+    <!-- <button type="button" onclick="document.getElementById('date').innerHTML= Date()">tell me date</button> -->
+    <button onclick="displayDate()">what time is it</button>
+
+    <script>
+        document.write(5 + 6);
+        //window.alert(5 + 5);
+        console.log(5 - 5);
+        const price1 = 5;
+        const price2 = 2;
+        let total = price1 + price2;
+        document.getElementById("c").innerHTML = "the total is "+ total;
+
+        var x = myFunction(5, 3);
+        document.getElementById("fun").innerHTML = x;
+
+        function myFunction(a, b) {
+            return a * b;
+        }
+
+        function toCelsious(f) {
+            return (5/9) * (f-32);
+        }
+
+        document.getElementById("cel").innerHTML = toCelsious(77);
+
+        const car = {type:"fiat", model:"500", color:"white"};
+
+        document.getElementById("car").innerHTML = "the car color is: "+ car.color; 
+
+       function displayDate() {
+            document.getElementById("date").innerHTML = Date();
+       } 
+
+       let firstName= "Pranav";
+       let lastName= "Panchal";
+
+       let text = `Welcome ${firstName} ${lastName}!`;
+
+       document.getElementById("full").innerHTML = text ;
+    </script>
+</body>
+</html>

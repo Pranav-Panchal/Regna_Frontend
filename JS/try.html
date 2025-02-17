@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input id="demo" type="text">
+    <button onclick="myFunction()">Test Input</button>
+    <p id="p01"></p>
+
+    <p>enter a number</p>
+
+    <input type="number" id="id1" max="100" min="10" required>
+    <button onclick="myMessage()">press me</button>
+
+    <p id="id2"></p> -->
+<!-- <div id="d1">
+
+    <h1>The XMLhttpRequest</h1>
+    <button type="button" onclick="loadDoc()"> Click Me</button>
+</div>
+
+    <script>
+        // function myFunction(){
+        //     const message = document.getElementById("p01");
+        //     message.innerHTML  = "";
+            
+        //     let x = document.getElementById("demo").value;
+            
+        //     try {
+        //         if(x.trim() == "") throw "empty";
+        //         if(isNaN(x)) throw "not a number";
+        //         x = Number(x);
+        //         if(x<5) throw "too low";
+        //         if(x>10) throw "too big";
+        //     } catch (error) {   
+        //         message.innerHTML = "input is" + error;
+                
+        //     }
+        // }
+
+        // function myMessage(){                    //API example
+        //     let inpObj ;   
+        //     if(document.getElementById("id1").validity.rangeOverflow){
+        //        inpObj = "too large";
+        //     }else{
+        //         inpObj = "ok";
+        //     }
+        //     document.getElementById("id2").innerHTML = inpObj;
+        // }
+
+        // function loadDoc(){
+        //     const first = new XMLHttpRequest();
+        //     first.onload = function() {
+        //         document.getElementById("d1").innerHTML = this.responseText;
+        //     }
+
+        //     first.open("GET", "ajax.txt");
+        //     first.send();
+        // }
+
+
+    </script> -->
+
+    <h2>Create a JSON string from a JavaScript array.</h2>
+<p id="demo"></p>
+
+<script>
+const arr = ["John", "Peter", "Sally", "Jane"];
+const myJSON = JSON.stringify(arr);
+document.getElementById("demo").innerHTML = myJSON;
+</script>
+
+</body>
+</html>
